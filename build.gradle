@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.forestgame'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.lwjgl:lwjgl:3.3.3'
+    implementation 'org.lwjgl:lwjgl-glfw:3.3.3'
+    implementation 'org.lwjgl:lwjgl-opengl:3.3.3'
+    implementation 'org.lwjgl:lwjgl-stb:3.3.3'
+    implementation 'org.joml:joml:1.10.5'
+    runtimeOnly 'org.lwjgl:lwjgl:3.3.3:natives-linux'
+    runtimeOnly 'org.lwjgl:lwjgl-glfw:3.3.3:natives-linux'
+    runtimeOnly 'org.lwjgl:lwjgl-opengl:3.3.3:natives-linux'
+    runtimeOnly 'org.lwjgl:lwjgl-stb:3.3.3:natives-linux'
+}
+
+application {
+    mainClass = 'com.forestgame.Main'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
